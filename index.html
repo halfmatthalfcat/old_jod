@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" type="text/css" href="main.css" />
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>JOliverDecor</title>
+</head>
+
+<body>
+<?php
+
+	if(isset($_SESSION["login_time"]) & $_SESSION["login_time"] => 1800){
+    	//session expired
+    	session_unset();
+        session_destroy();
+    }
+
+?>
+
+<script type="text/javascript" src="jquery-2.0.3.js"></script>
+<script>
+
+	$(document).ready(function(){
+		$("#login_buttons").click(function() {
+			$("#login_container").slideToggle("slow");
+		});
+	});
+	
+</script>
+<div id="whole_container">
+    <div id="head_container">
+        <div id="status_bar">
+            &nbsp;
+            <?php
+            	if(!isset($_SESSION["user"])){
+            		echo "<div id=\"login_buttons\">";
+                	echo "Login";
+            		echo "</div>";
+                 } else {
+                 	echo "<div id=\"logged_in\">";
+                    echo $_SESSION["user"];
+                    echo "</div>";
+                    echo "|";
+                    echo "Logout";
+                 }
+            ?>
+            <div id="login_container">
+                <form name="login" action="login.php" method="post">
+                    <table id="login_table">
+                        <tr>
+                            <td>Email:</td>
+                            <td><input type="text" name="username"/></td>
+                            <td>Password:</td>
+                            <td><input type="password" name="password"/></td>
+                            <td><input type="submit" value="Login" /></td>
+                         </tr>
+                    </table>
+                </form> 	
+            </div>
+        </div>
+        <div id="nav_container">
+          <table id="nav_table">
+                    <tr>
+                        <td id="nav_item">
+                            Home
+                        </td>
+                        <td id="nav_item">
+                            Gallery
+                        </td>
+                    </tr>
+            </table>
+        </div>
+        <div class="logo">
+            logo
+        </div>
+    
+        <div id="content" style="height:300px">
+    
+        </div>
+    </div>
+</div>
+</body>
+</html>

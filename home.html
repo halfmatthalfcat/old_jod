@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" type="text/css" href="main.css" />
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>JOliverDecor</title>
+
+<?php
+	if(session_id() == "" | !iisset($_SESSION["user"])){
+		//not logged in
+		header("Location: index.html");
+	} else if (isset($_SESSION["login_time"]) & $_SESSION["login_time"] >= 1800){
+    	//session expired
+    	session_unset();
+        session_destroy();
+    }
+?>
+
+
+</head>
+
+<body>
+<div id="head_container">
+  <div id="status_bar">
+  	status
+  </div>
+  <div id="nav_container">
+   	  <table id="nav_table">
+            	<tr>
+                	<td id="nav_item">
+                    	Home
+                    </td>
+                    <td id="nav_item">
+                    	Rolodex
+                    </td>
+                    <td id="nav_item">
+                    	Budgets
+                    </td>
+                    <td id="nav_item">
+                    	Invoices
+                    </td>
+                </tr>
+        </table>
+    </div>
+    <div class="logo">
+  	  logo
+    </div>
+    <div id="content">
+    	content
+    </div>
+</div>
+</body>
+</html>

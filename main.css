@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin:0; 
+	padding:0;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+html, body {
+	height: 100%;
+	background: #5B5A5C; 
+
+}
+
+.block {
+	display: block;
+}
+
+.dialog_fieldset{
+	padding: 5px;
+	border: none;
+}
+
+.dialog_label{
+	 font-size:12px;
+	 padding-bottom:2px;
+	 padding-top:2px;
+}
+
+#whole_container{
+	margin: 0 auto;
+}
+
+#head_container{
+	vertical-align:top;
+	width:80%;
+	min-height: 100%;
+	margin: 0 auto;
+	background:#89A132;
+	padding: 5px;
+	padding-bottom: 20px;
+	-webkit-box-shadow:2px 2px 3px #888, -2px 2px 3px #888; 
+    -moz-box-shadow:2px 2px 3px #888, -2px 2px 3px #888;
+    box-shadow:2px 2px 3px #888, -2px 2px 3px #888;
+}
+
+#accounts_wrapper, #budget_wrapper{
+	margin: 0 auto;
+	width: 90%;
+}
+
+#account_bar, #budget_bar{
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 90%;
+	border: 1px solid #89A132;
+}
+
+#account_item, #budget_item, #invoice_item, #create_budget{
+	padding: 5px;
+	float:right;
+	background-color: lightBlue;
+	cursor: pointer;
+	border: 1px solid #89A132;
+}
+
+#account_item:hover, #budget_item:hover, #invoice_item:hover, #create_budget:hover{
+	padding: 5px;
+	background-color: blue;
+	color: white;
+	cursor: pointer;
+}
+
+#galleria_container{
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 90%;
+}
+
+.galleria{
+	width: 100%;
+	height: 100%;
+}
+
+#message{
+	float: left;
+	text-align: center;
+}
+
+#status_bar{
+	margin: 0 auto;
+	height: 30px;
+}
+
+#login_buttons{
+	float: right;
+	vertical-align: middle;
+}
+
+#logged_in{
+	float: right;
+}
+
+#login_button{
+	background-color: lightBlue;
+	height: 20px;
+	width: 50px;
+	cursor: pointer;
+}
+
+#login_button:hover{
+	background-color: blue;
+	color: white; 
+}
+
+#logout_button{
+	background-color: lightCoral;
+	height: 20px;
+	width: 50px;
+	cursor: pointer;
+}
+
+#logout_button:hover{
+	background-color: red;
+	color: white;
+}
+
+#logo_container{
+	margin: 0 auto;
+}
+
+#logo{
+	margin: 0 auto;
+	max-width: 50%;
+	width: auto;
+	height: auto;
+	display: block;
+}
+
+#nav_container{
+	margin: 0 auto;
+}
+
+#nav_table {
+	margin: 0 auto;
+	width:50%;
+	border:none;
+}
+
+#nav_item {
+	text-align:center;
+	width:auto;
+	background-color: lightBlue;
+	cursor: pointer;
+}
+
+#nav_item:hover{
+	text-align:center;
+	width:auto;
+	background-color: blue;
+	color: white;
+	cursor: pointer;
+}
+
+#content{
+	margin: 0 auto;
+	height:100%;
+}
+
+
+#login_table{
+	float: right;
+}
+
+/* EditableGrid Stuff */
+
+table.editablegrid { 
+	border-collapse: collapse; 
+	border: 1px solid #CCB; 
+	width: 100%; 
+	font-family:'lucida grande', tahoma, verdana, arial, sans-serif; 
+	font-size:11px;
+}
+
+table.editablegrid td{ 
+	padding: 5px; 
+	border: 1px solid #E0E0E0; 
+}
+			
+table.editablegrid th { 
+	padding: 5px;
+	border: 1px solid #E0E0E0; 
+	background: #E5E5E5; 
+	text-align: left; 
+}
+			
+input.invalid { 
+	background: red; 
+	color: #FDFDFD; 
+}
